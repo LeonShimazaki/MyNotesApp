@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textNoteLayoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Add a note"
+            android:textSize="26sp" />
+
+        <EditText
+            android:id="@+id/editNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNoteLayoutTitle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Add a title"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/editNoteTitle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:ems="10"
+            android:hint="Add a description"
+            android:inputType="textMultiLine" />
+
+        <LinearLayout
+            android:id="@+id/layoutNoteActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editNoteContent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAddNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Add" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
