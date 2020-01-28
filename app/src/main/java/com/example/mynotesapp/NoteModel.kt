@@ -6,8 +6,7 @@ import android.os.Parcelable
 class NoteModel(
     var title: String,
     var content: String
-): Parcelable
-{
+) : Parcelable {
     constructor(source: Parcel) : this(
         source.readString() ?: "",
         source.readString() ?: ""

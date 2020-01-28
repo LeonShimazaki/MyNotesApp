@@ -1,23 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/back">
+    android:background="@drawable/border"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="104dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <TextView
         android:id="@+id/textTitleRow"
-        android:layout_width="match_parent"
+        style="@style/WhiteBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        tools:text="This is a title"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textDescriptionRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This is a title" />
 
     <TextView
         android:id="@+id/textDescriptionRow"
-        android:layout_width="match_parent"
+        style="@style/WhiteBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleRow"
         tools:text="This is a description" />
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
