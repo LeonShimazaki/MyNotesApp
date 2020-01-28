@@ -16,11 +16,12 @@ class NewNote : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    //New note being Created
     override fun onClick(v: View?) {
         if (v == buttonAddNote) {
             val newNote = NoteModel(editNoteTitle.text.toString(), editNoteContent.text.toString())
             val result = Intent()
-            result.putExtra("NewNote", newNote)
+            result.putExtra("DewNote", newNote)
             setResult(Activity.RESULT_OK, result)
             finish()
         }

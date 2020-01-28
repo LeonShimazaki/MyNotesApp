@@ -7,9 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.note_row.view.*
 
 class MainAdapter : RecyclerView.Adapter<CustomViewHolder>() {
+
     var x = 0
 
-    //My database/List is made in myNotes
+    //Send data to NoteModel List Class from myNotes
     var myNotes = mutableListOf(NoteModel("Test", "Content"))
 
     //Number of notes in my list
@@ -25,13 +26,14 @@ class MainAdapter : RecyclerView.Adapter<CustomViewHolder>() {
         return CustomViewHolder(cellView)
     }
 
-    //Allows my views to be reused
+    //Binds the Data to the View Holder e.g. Title, Content sticks(positions) onto the the Viewholder
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val myNote = myNotes[position]
-        holder.view.textTitleRow?.text = myNote.title
-        holder.view.textDescriptionRow?.text = myNote.content
+        val position = myNotes[position]
+        holder.view.textTitleRow?.text = position.title
+        holder.view.textDescriptionRow?.text = position.content
     }
 
+    //Add the note to the List/DB from NoteModel.kt
     fun addNote(note: NoteModel) {
         for (x in 0..100)
             myNotes.add(note)
@@ -40,4 +42,5 @@ class MainAdapter : RecyclerView.Adapter<CustomViewHolder>() {
     }
 }
 
+//A Single Note View being reused
 class CustomViewHolder(val view: View) : RecyclerView.ViewHolder(view){}
